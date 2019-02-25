@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2FD4AA1AB31C1C83BFBA9937 /* Pods_KeyboardAdjustable_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18111034E2295C703D53CEFD /* Pods_KeyboardAdjustable_Example.framework */; };
+		5AC7359C22236E5800E894E6 /* ExamplesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7359B22236E5800E894E6 /* ExamplesTableViewController.swift */; };
+		5AC7359E22236E6400E894E6 /* SingleConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7359D22236E6400E894E6 /* SingleConstraintViewController.swift */; };
+		5AC735A022236E6B00E894E6 /* ScrollViewKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7359F22236E6B00E894E6 /* ScrollViewKeyboardViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -34,10 +36,12 @@
 		33E9303B3A3042B5047105B7 /* Pods-KeyboardAdjustable_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAdjustable_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAdjustable_Tests/Pods-KeyboardAdjustable_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C719177C2B1C079EEE692D0 /* Pods-KeyboardAdjustable_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAdjustable_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAdjustable_Tests/Pods-KeyboardAdjustable_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		539793A2BDD55E67DBB10799 /* Pods-KeyboardAdjustable_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAdjustable_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAdjustable_Example/Pods-KeyboardAdjustable_Example.release.xcconfig"; sourceTree = "<group>"; };
+		5AC7359B22236E5800E894E6 /* ExamplesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesTableViewController.swift; sourceTree = "<group>"; };
+		5AC7359D22236E6400E894E6 /* SingleConstraintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleConstraintViewController.swift; sourceTree = "<group>"; };
+		5AC7359F22236E6B00E894E6 /* ScrollViewKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewKeyboardViewController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* KeyboardAdjustable_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardAdjustable_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -69,6 +73,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AC7359A22236E3800E894E6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AC7359B22236E5800E894E6 /* ExamplesTableViewController.swift */,
+				5AC7359D22236E6400E894E6 /* SingleConstraintViewController.swift */,
+				5AC7359F22236E6B00E894E6 /* ScrollViewKeyboardViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -93,8 +107,8 @@
 		607FACD21AFB9204008FA782 /* Example for KeyboardAdjustable */ = {
 			isa = PBXGroup;
 			children = (
+				5AC7359A22236E3800E894E6 /* Controllers */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -334,8 +348,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				5AC7359E22236E6400E894E6 /* SingleConstraintViewController.swift in Sources */,
+				5AC7359C22236E5800E894E6 /* ExamplesTableViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				5AC735A022236E6B00E894E6 /* ScrollViewKeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
