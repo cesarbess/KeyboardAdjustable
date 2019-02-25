@@ -13,10 +13,9 @@ class ExamplesTableViewController: UITableViewController {
     enum Examples: String {
         case scrollView = "Scroll View"
         case singleConstaint = "Single Constraint"
-        case multipleConstraints = "Multiple Constraints"
     }
 
-    let examples: [Examples] = [.scrollView, .singleConstaint, .multipleConstraints]
+    let examples: [Examples] = [.scrollView, .singleConstaint]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +45,6 @@ class ExamplesTableViewController: UITableViewController {
             performSegue(withIdentifier: "scrollView", sender: nil)
         case .singleConstaint:
             performSegue(withIdentifier: "singleConstraint", sender: nil)
-        default:
-            break
         }
     }
 }
