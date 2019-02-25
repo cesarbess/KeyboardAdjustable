@@ -28,8 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09FD5CC4710CA398CCC78A80 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		1259A8C003159A120CB7ACEA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		09FD5CC4710CA398CCC78A80 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1259A8C003159A120CB7ACEA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		18111034E2295C703D53CEFD /* Pods_KeyboardAdjustable_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyboardAdjustable_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E9303B3A3042B5047105B7 /* Pods-KeyboardAdjustable_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAdjustable_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAdjustable_Tests/Pods-KeyboardAdjustable_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C719177C2B1C079EEE692D0 /* Pods-KeyboardAdjustable_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAdjustable_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAdjustable_Tests/Pods-KeyboardAdjustable_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		807D83C053D3B884B7FC47DC /* Pods-KeyboardAdjustable_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAdjustable_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAdjustable_Example/Pods-KeyboardAdjustable_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8FE2E75A725EFEFCE4490457 /* Pods_KeyboardAdjustable_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyboardAdjustable_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E869440BDF42536CF12DB808 /* KeyboardAdjustable.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = KeyboardAdjustable.podspec; path = ../KeyboardAdjustable.podspec; sourceTree = "<group>"; };
+		E869440BDF42536CF12DB808 /* KeyboardAdjustable.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KeyboardAdjustable.podspec; path = ../KeyboardAdjustable.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -487,7 +487,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -502,7 +502,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

@@ -1,0 +1,16 @@
+PODS:
+  - KeyboardAdjustable (0.1.0)
+
+DEPENDENCIES:
+  - KeyboardAdjustable (from `../`)
+
+EXTERNAL SOURCES:
+  KeyboardAdjustable:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KeyboardAdjustable: 8467114df78a75fd3fe84ee267d2c3a210bf8e4d
+
+PODFILE CHECKSUM: 4e937dfa826fc5f7b3213796a0022aa3f9f936c6
+
+COCOAPODS: 1.5.3
