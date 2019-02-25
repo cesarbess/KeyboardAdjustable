@@ -8,12 +8,18 @@
 import Foundation
 import UIKit
 
+/**
+ The protocol that contains the logic to adjust the view when the keyboard appears and hides
+ */
 public protocol KeyboardAdjustable {
     var keyboardAdjustingStrategy: KeyboardAdjustingStrategy? { get set }
 }
 
 extension KeyboardAdjustable where Self: UIViewController {
 
+    /**
+     The user's default NotificationCenter
+     */
     public var center: NotificationCenter {
         get {
             return NotificationCenter.default
@@ -48,12 +54,26 @@ extension KeyboardAdjustable where Self: UIViewController {
 
     // MARK: Notifications Setup
 
+    /**
+     Registers the ViewController to two keyboard notifications:
+     - keyboardWillShowNotification,
+     - keyboardWillHideNotification
+
+     Make sure to implement your KeyboardAdjustingStrategy before one of these notifications are triggered.
+     */
     public func registerForKeyboardNotifications() {
         userInfo[KeyboardNotifications.willShow.rawValue] = center.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil, using: keyboardWillShow)
 
         userInfo[KeyboardNotifications.willHide.rawValue] = center.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil, using: keyboardWillHide)
     }
 
+    /**
+     Unregisters the ViewController from two keyboard notifications:
+     - keyboardWillShowNotification,
+     - keyboardWillHideNotification
+
+     Make sure to call this on your viewDidDisappear, or whenever you don't want to listen to keyboard changes anymore
+     */
     public func unregisterForKeyboardNotification() {
         if let willShowObserver = userInfo[KeyboardNotifications.willShow.rawValue] as? NSObjectProtocol {
             center.removeObserver(willShowObserver, name: UIResponder.keyboardWillShowNotification, object: nil)
