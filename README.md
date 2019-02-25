@@ -55,6 +55,17 @@ This Pod also has an example project
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Demo
+
+With a ScrollView:
+
+![](https://media.giphy.com/media/3rbgoPcJQv2zrp7yFF/giphy.gif)
+
+With a Bottom Constraint
+
+![](https://media.giphy.com/media/2kP67J3u8l8xRZc7k7/giphy.gif)
+
+
 ## Requirements
 
 Swift 4.2
