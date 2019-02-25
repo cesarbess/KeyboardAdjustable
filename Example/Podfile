@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'KeyboardAdjustable_Example' do
+  pod 'KeyboardAdjustable', :path => '../'
+
+  target 'KeyboardAdjustable_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
