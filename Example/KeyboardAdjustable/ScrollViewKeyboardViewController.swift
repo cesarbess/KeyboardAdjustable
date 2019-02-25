@@ -19,12 +19,12 @@ class ScrollViewKeyboardViewController: UIViewController, KeyboardAdjustable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 1. Send the scroll view which will have its offset changed
-        // 2. Send the view that will get hidden by the keyboard
-        // 3. Set the space you want the view to have above the keyboard
-        keyboardAdjustingStrategy = .scrollView(scrollView: scrollView, viewAboveKeyboard: textFieldsStackView, spaceAboveKeyboard: 20)
+
         // Register for keyboard notifications
         registerForKeyboardNotifications()
+
+        // Set your desired strategy to adjust the view when the keyboard appears
+        keyboardAdjustingStrategy = .scrollView(scrollView: scrollView, viewAboveKeyboard: textFieldsStackView, spaceAboveKeyboard: 20)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
