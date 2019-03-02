@@ -26,6 +26,16 @@ extension KeyboardAdjustable where Self: UIViewController {
         }
     }
 
+    private var safeAreaTopInset: CGFloat {
+        get {
+            if #available(iOS 11.0, *) {
+                return view.safeAreaInsets.top
+            } else {
+                return 0
+            }
+        }
+    }
+
     func keyboardWillShow(notification: Notification) {
         guard let strategy = keyboardAdjustingStrategy else {
             fatalError("Need to set a KeyboardAdjustingStrategy")
@@ -87,11 +97,12 @@ extension KeyboardAdjustable where Self: UIViewController {
     // MARK: Keyboard Will Show Handlers
 
     func adjustKeyboardWillShow(on scrollView: UIScrollView, view aboveKeyboard: UIView, with distanceAboveKeyboard: CGFloat, for notification: Notification) {
-        guard let keyboardSize = notification.keyboardSize else { return }
-        var contentInset: UIEdgeInsets = scrollView.contentInset
 
+        guard let keyboardSize = notification.keyboardSize else { return }
+        
+        var contentInset: UIEdgeInsets = scrollView.contentInset
         let spaceFromBottom = view.frame.maxY - aboveKeyboard.frame.maxY
-        let inset = keyboardSize.height - spaceFromBottom + distanceAboveKeyboard
+        let inset = keyboardSize.height - spaceFromBottom + distanceAboveKeyboard + safeAreaTopInset
 
         contentInset.bottom = inset
         scrollView.contentInset = contentInset
