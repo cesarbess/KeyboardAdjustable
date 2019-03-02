@@ -46,6 +46,8 @@ extension KeyboardAdjustable where Self: UIViewController {
             adjustKeyboardWillShow(on: scrollView, view: viewAboveKeyboard, with: distanceAboveKeyboard, for: notification)
         case .singleConstraint(let constraint, _, let distanceAboveKeyboard):
             adjustKeyboardWillShow(on: constraint, with: distanceAboveKeyboard, for: notification)
+        case .multipleConstraints(let constraints, _, let constantsToChange):
+            adjustKeyboardWillShowOrHide(on: constraints, with: constantsToChange, for: notification)
         }
     }
 
@@ -59,6 +61,8 @@ extension KeyboardAdjustable where Self: UIViewController {
             adjustKeyboardWillHide(on: scrollView)
         case .singleConstraint(let constraint, let normalConstant, _):
             adjustKeyboardWillHide(on: constraint, with: normalConstant, for: notification)
+        case .multipleConstraints(let constraints, let originalConstants, _):
+            adjustKeyboardWillShowOrHide(on: constraints, with: originalConstants, for: notification)
         }
     }
 
@@ -94,7 +98,7 @@ extension KeyboardAdjustable where Self: UIViewController {
         }
     }
 
-    // MARK: Keyboard Will Show Handlers
+    // MARK: Will Show On Scroll View
 
     func adjustKeyboardWillShow(on scrollView: UIScrollView, view aboveKeyboard: UIView, with distanceAboveKeyboard: CGFloat, for notification: Notification) {
 
@@ -120,6 +124,8 @@ extension KeyboardAdjustable where Self: UIViewController {
         })
     }
 
+    // MARK: Will Show On Single Constraint
+
     func adjustKeyboardWillShow(on singleConstraint: NSLayoutConstraint, with constant: CGFloat, for notification: Notification) {
         guard
             let keyboardSize = notification.keyboardSize,
@@ -138,12 +144,34 @@ extension KeyboardAdjustable where Self: UIViewController {
         })
     }
 
-    // MARK: Keyboard Will Hide Handlers
+    // MARK: Will Show Or Hide On Multiple Constraints
+
+    // Logic for multiple constraints is the same for showing and hiding the keyboard, so the same implementation is used for both
+    func adjustKeyboardWillShowOrHide(on multipleConstraints: [NSLayoutConstraint], with constants: [CGFloat], for notification: Notification) {
+        guard
+            let keyboardAnimationDuration = notification.keyboardAnimationDuration,
+            let animationCurve = notification.keyboardAnimationCurve
+            else { return }
+
+        let curveAnimationOption = UIView.AnimationOptions(rawValue: UInt(animationCurve))
+        let options: UIView.AnimationOptions = [.beginFromCurrentState, curveAnimationOption]
+
+        constants.enumerated().forEach({ multipleConstraints[safe: $0.offset]?.constant = $0.element })
+
+        UIView.animate(withDuration: keyboardAnimationDuration, delay: 0, options: options, animations: {
+            [weak self] in
+            self?.view.layoutIfNeeded()
+        })
+    }
+
+    // MARK: Will Hide on Scroll View
 
     func adjustKeyboardWillHide(on scrollView: UIScrollView) {
         let contentInset: UIEdgeInsets = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
     }
+
+    // MARK: Will Hide on Single Constraint
 
     func adjustKeyboardWillHide(on singleConstraint: NSLayoutConstraint, with constant: CGFloat, for notification: Notification) {
         guard
