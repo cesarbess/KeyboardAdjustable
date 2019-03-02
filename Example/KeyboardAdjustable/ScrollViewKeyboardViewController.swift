@@ -14,9 +14,8 @@ class ScrollViewKeyboardViewController: UIViewController, KeyboardAdjustable {
     var keyboardAdjustingStrategy: KeyboardAdjustingStrategy?
 
     @IBOutlet weak var scrollView: UIScrollView!
-
-    @IBOutlet weak var textFieldsStackView: UIStackView!
-
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +23,7 @@ class ScrollViewKeyboardViewController: UIViewController, KeyboardAdjustable {
         registerForKeyboardNotifications()
 
         // Set your desired strategy to adjust the view when the keyboard appears
-        keyboardAdjustingStrategy = .scrollView(scrollView: scrollView, viewAboveKeyboard: textFieldsStackView, spaceAboveKeyboard: 20)
+        keyboardAdjustingStrategy = .scrollView(scrollView: scrollView, viewAboveKeyboard: loginButton, spaceAboveKeyboard: 20)
     }
 
     override func viewWillDisappear(_ animated: Bool) {

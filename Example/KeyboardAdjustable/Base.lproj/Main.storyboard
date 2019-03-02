@@ -52,7 +52,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ze-Nv-hw5">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="verification code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ze-Nv-hw5">
                                 <rect key="frame" x="37.5" y="537" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ozQ-KZ-vIq"/>
@@ -90,79 +90,80 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJf-LZ-kOU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DjC-YQ-XS3">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UDT-eL-Lay">
-                                                <rect key="frame" x="37.5" y="337" width="300" height="130"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sl8-6T-quJ">
+                                                <rect key="frame" x="37.5" y="448" width="300" height="70"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="73a-g6-9TW">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wLx-M9-Qmy">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <outlet property="delegate" destination="IzN-Yq-r3W" id="mbO-GB-dA1"/>
+                                                            <outlet property="delegate" destination="IzN-Yq-r3W" id="ugq-kJ-oKv"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HB0-uN-8fh">
-                                                        <rect key="frame" x="0.0" y="50" width="300" height="30"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7rM-vI-vso">
+                                                        <rect key="frame" x="0.0" y="40" width="300" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <outlet property="delegate" destination="IzN-Yq-r3W" id="Zom-Yx-qQs"/>
-                                                        </connections>
-                                                    </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRy-i4-xTh">
-                                                        <rect key="frame" x="0.0" y="100" width="300" height="30"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                        <connections>
-                                                            <outlet property="delegate" destination="IzN-Yq-r3W" id="mg5-XO-s7g"/>
+                                                            <outlet property="delegate" destination="IzN-Yq-r3W" id="keY-Ss-AWv"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLr-WO-fja">
+                                                <rect key="frame" x="37.5" y="543" width="300" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="ukh-KI-B51"/>
+                                                </constraints>
+                                                <state key="normal" title="Login"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94106304649999994" green="0.94935458900000003" blue="0.92940968280000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="UDT-eL-Lay" secondAttribute="bottom" constant="200" id="3xC-c1-fa7"/>
-                                            <constraint firstItem="UDT-eL-Lay" firstAttribute="width" secondItem="DjC-YQ-XS3" secondAttribute="width" multiplier="0.8" id="QVO-nt-GEE"/>
-                                            <constraint firstItem="UDT-eL-Lay" firstAttribute="centerX" secondItem="DjC-YQ-XS3" secondAttribute="centerX" id="hVo-Ws-4OE"/>
+                                            <constraint firstItem="GLr-WO-fja" firstAttribute="top" secondItem="Sl8-6T-quJ" secondAttribute="bottom" constant="25" id="HW3-1k-Afg"/>
+                                            <constraint firstItem="Sl8-6T-quJ" firstAttribute="centerX" secondItem="DjC-YQ-XS3" secondAttribute="centerX" id="I3R-Z4-hfx"/>
+                                            <constraint firstItem="Sl8-6T-quJ" firstAttribute="width" secondItem="DjC-YQ-XS3" secondAttribute="width" multiplier="0.8" id="SXQ-fW-eyA"/>
+                                            <constraint firstItem="GLr-WO-fja" firstAttribute="width" secondItem="7rM-vI-vso" secondAttribute="width" id="WU6-ee-LD9"/>
+                                            <constraint firstItem="GLr-WO-fja" firstAttribute="centerX" secondItem="Sl8-6T-quJ" secondAttribute="centerX" id="aF0-6d-gCI"/>
+                                            <constraint firstAttribute="bottom" secondItem="Sl8-6T-quJ" secondAttribute="bottom" constant="85" id="eFY-vn-3TG"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="DjC-YQ-XS3" secondAttribute="bottom" id="5je-SL-Lrr"/>
-                                    <constraint firstItem="DjC-YQ-XS3" firstAttribute="height" secondItem="dJf-LZ-kOU" secondAttribute="height" priority="250" id="MT6-Xd-yI5"/>
-                                    <constraint firstItem="DjC-YQ-XS3" firstAttribute="width" secondItem="dJf-LZ-kOU" secondAttribute="width" id="OEG-4V-7Dy"/>
-                                    <constraint firstAttribute="trailing" secondItem="DjC-YQ-XS3" secondAttribute="trailing" id="ars-gQ-EjP"/>
-                                    <constraint firstItem="DjC-YQ-XS3" firstAttribute="top" secondItem="dJf-LZ-kOU" secondAttribute="top" id="pVz-bl-WIa"/>
-                                    <constraint firstItem="DjC-YQ-XS3" firstAttribute="leading" secondItem="dJf-LZ-kOU" secondAttribute="leading" id="rT3-xk-3W2"/>
+                                    <constraint firstItem="DjC-YQ-XS3" firstAttribute="leading" secondItem="dJf-LZ-kOU" secondAttribute="leading" id="Ap7-4c-BPs"/>
+                                    <constraint firstItem="DjC-YQ-XS3" firstAttribute="top" secondItem="dJf-LZ-kOU" secondAttribute="top" id="DNl-zz-7Rx"/>
+                                    <constraint firstAttribute="bottom" secondItem="DjC-YQ-XS3" secondAttribute="bottom" id="bi9-oG-dcU"/>
+                                    <constraint firstAttribute="trailing" secondItem="DjC-YQ-XS3" secondAttribute="trailing" id="tms-J2-QBn"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.94106304649999994" green="0.94935458900000003" blue="0.92940968280000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="dJf-LZ-kOU" firstAttribute="leading" secondItem="RdO-Fz-UwZ" secondAttribute="leading" id="0nV-XI-Go3"/>
-                            <constraint firstAttribute="bottom" secondItem="dJf-LZ-kOU" secondAttribute="bottom" id="2LF-RI-9Ad"/>
-                            <constraint firstItem="dJf-LZ-kOU" firstAttribute="top" secondItem="c6K-yN-ido" secondAttribute="top" id="CPT-2g-1nG"/>
-                            <constraint firstItem="dJf-LZ-kOU" firstAttribute="trailing" secondItem="RdO-Fz-UwZ" secondAttribute="trailing" id="XBW-71-2n5"/>
+                            <constraint firstItem="DjC-YQ-XS3" firstAttribute="width" secondItem="RdO-Fz-UwZ" secondAttribute="width" id="GOP-vd-QOF"/>
+                            <constraint firstItem="dJf-LZ-kOU" firstAttribute="centerY" secondItem="RdO-Fz-UwZ" secondAttribute="centerY" id="N22-Kz-HKU"/>
+                            <constraint firstItem="DjC-YQ-XS3" firstAttribute="height" secondItem="RdO-Fz-UwZ" secondAttribute="height" id="ZGP-CX-eko"/>
+                            <constraint firstItem="dJf-LZ-kOU" firstAttribute="width" secondItem="RdO-Fz-UwZ" secondAttribute="width" id="gE0-YR-kGI"/>
+                            <constraint firstItem="dJf-LZ-kOU" firstAttribute="height" secondItem="RdO-Fz-UwZ" secondAttribute="height" id="kJe-m7-ja1"/>
+                            <constraint firstItem="dJf-LZ-kOU" firstAttribute="centerX" secondItem="RdO-Fz-UwZ" secondAttribute="centerX" id="yrX-kg-vGv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RdO-Fz-UwZ"/>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="GLr-WO-fja" id="7ol-hm-sOS"/>
                         <outlet property="scrollView" destination="dJf-LZ-kOU" id="62H-93-ZCd"/>
-                        <outlet property="textFieldsStackView" destination="UDT-eL-Lay" id="z3n-rd-cX7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1V-Xa-250" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335" y="725"/>
+            <point key="canvasLocation" x="333.60000000000002" y="724.58770614692662"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bCU-So-REh">
