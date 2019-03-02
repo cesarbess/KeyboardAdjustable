@@ -43,4 +43,18 @@ public enum KeyboardAdjustingStrategy {
         originalConstant: CGFloat,
         spaceAboveKeyboard: CGFloat
     )
+
+    /**
+     Sets up the collection of constraints to change its constants by the collection of constants set. Make sure all collectino parameters have the same count, otherwise extra values in the collection will have its change ignored.
+
+     - Parameter constraints: The collection of NSLayoutConstraint which will have its constants changed
+     - Parameter originalConstants: A collection of the values to be set back when the keyboard hides
+     - Parameter adjustedConstants: A collection of the new values to be set in each constraint when the keyboard shows.
+     */
+
+    case multipleConstraints(
+        constraints: [NSLayoutConstraint],
+        originalConstants: [CGFloat],
+        adjustedConstants: [CGFloat]
+    )
 }
