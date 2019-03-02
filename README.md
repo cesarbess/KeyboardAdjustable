@@ -5,12 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/Keyhttps://img.shields.io/travis/CesarBess/KeyboardAdjustable.svg?style=flatboardAdjustable.svg?style=flat)](https://cocoapods.org/pods/KeyboardAdjustable)
 [![Platform](https://img.shields.io/cocoapods/p/KeyboardAdjustable.svg?style=flat)](https://cocoapods.org/pods/KeyboardAdjustable)
 
-KeyboardAdjustable takes into account the two most common ways we adjust our view when the keyboard appears:
+KeyboardAdjustable takes into account the three most common ways we adjust our view when the keyboard appears:
 
 * When you have a ScrollView and you want to change its contentInset when the keyboard appears
 * When you have a bottom constraint for a UIView and you want to change it’s value when the keyboard appears
+* When you have multiple constraints in your views and you want to change it's values when the keyboard appears
 
-With only one line of code you'll be able to handle these scenarios without having to implement the observers in your own UIViewController.
+With only one line of code you'll be able to handle these scenarios without having to implement the keyboard observers in your own UIViewController.
 
 ## How to use:
 
@@ -59,11 +60,15 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 With a ScrollView:
 
-![](https://media.giphy.com/media/3rbgoPcJQv2zrp7yFF/giphy.gif)
+![](https://media.giphy.com/media/bL8dsyyY19e9Ph0Yb5/giphy.gif)
 
-With a Bottom Constraint
+With a Single Constraint:
 
-![](https://media.giphy.com/media/2kP67J3u8l8xRZc7k7/giphy.gif)
+![](https://media.giphy.com/media/oFyDwLDWvCK9XPCWvc/giphy.gif)
+
+With Multiple Constraints:
+
+![](https://media.giphy.com/media/5Y9tABBUMy9r4lP9M5/giphy.gif)
 
 
 ## Requirements
