@@ -82,6 +82,8 @@ it, simply add the following line to your Podfile:
 pod 'KeyboardAdjustable'
 ```
 
+If you're having issues with the command above, try running `pod repo update` then try again
+
 ## Author
 
 Cesar Bess, cesar.bess@gmail.com
