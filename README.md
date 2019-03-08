@@ -1,8 +1,6 @@
 # KeyboardAdjustable
 
-[![CI Status]()](https://travis-ci.org/CesarBess/KeyboardAdjustable)
 [![Version](https://img.shields.io/cocoapods/v/KeyboardAdjustable.svg?style=flat)](https://cocoapods.org/pods/KeyboardAdjustable)
-[![License](https://img.shields.io/cocoapods/l/Keyhttps://img.shields.io/travis/CesarBess/KeyboardAdjustable.svg?style=flatboardAdjustable.svg?style=flat)](https://cocoapods.org/pods/KeyboardAdjustable)
 [![Platform](https://img.shields.io/cocoapods/p/KeyboardAdjustable.svg?style=flat)](https://cocoapods.org/pods/KeyboardAdjustable)
 
 KeyboardAdjustable takes into account the three most common ways we adjust our view when the keyboard appears:
@@ -83,6 +81,8 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'KeyboardAdjustable'
 ```
+
+If you're having issues with the command above, try running `pod repo update` then try again
 
 ## Author
 
