@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Examples Table View Controller-->
+        <!--Examples-->
         <scene sceneID="jyO-Wf-YxE">
             <objects>
-                <tableViewController id="1Hg-cB-9Ly" customClass="ExamplesTableViewController" customModule="KeyboardAdjustable_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Examples" id="1Hg-cB-9Ly" customClass="ExamplesTableViewController" customModule="KeyboardAdjustable_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bec-nR-ZjI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

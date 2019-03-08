@@ -28,7 +28,7 @@ class ScrollViewKeyboardViewController: UIViewController, KeyboardAdjustable {
 
     override func viewWillDisappear(_ animated: Bool) {
         // Unregister for keyboard notifications
-        unregisterForKeyboardNotification()
+        unregisterForKeyboardNotifications()
     }
 }
 

@@ -229,10 +229,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 3Z2L28GCPY;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 3Z2L28GCPY;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -505,6 +507,7 @@
 			baseConfigurationReference = 807D83C053D3B884B7FC47DC /* Pods-KeyboardAdjustable_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3Z2L28GCPY;
 				INFOPLIST_FILE = KeyboardAdjustable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -520,6 +523,7 @@
 			baseConfigurationReference = 539793A2BDD55E67DBB10799 /* Pods-KeyboardAdjustable_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3Z2L28GCPY;
 				INFOPLIST_FILE = KeyboardAdjustable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -534,6 +538,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 33E9303B3A3042B5047105B7 /* Pods-KeyboardAdjustable_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 3Z2L28GCPY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -556,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C719177C2B1C079EEE692D0 /* Pods-KeyboardAdjustable_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 3Z2L28GCPY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

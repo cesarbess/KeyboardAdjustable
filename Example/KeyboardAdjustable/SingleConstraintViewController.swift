@@ -28,7 +28,7 @@ class SingleConstraintViewController: UIViewController, KeyboardAdjustable {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         // Unregister for keyboard notifications
-        unregisterForKeyboardNotification()
+        unregisterForKeyboardNotifications()
     }
 }
 

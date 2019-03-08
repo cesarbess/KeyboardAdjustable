@@ -20,7 +20,7 @@ With only one line of code you'll be able to handle these scenarios without havi
 3. Setup a KeyboardAdjustingStrategy on your viewDidLoad
 
 Note:
-Make sure you're calling `registerForKeyboardNotifications()` on your viewDidLoad and `unregisterForKeyboardNotification()` on your viewDidDisappear.
+Make sure you're calling `registerForKeyboardNotifications()` on your viewDidLoad and `unregisterForKeyboardNotifications()` on your viewDidDisappear.
 
 ## Example
 
@@ -47,7 +47,7 @@ class SingleConstraintViewController: UIViewController, KeyboardAdjustable {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         // Unregister for keyboard notifications
-        unregisterForKeyboardNotification()
+        unregisterForKeyboardNotifications()
     }
 }
 ```

@@ -88,7 +88,7 @@ extension KeyboardAdjustable where Self: UIViewController {
 
      Make sure to call this on your viewDidDisappear, or whenever you don't want to listen to keyboard changes anymore
      */
-    public func unregisterForKeyboardNotification() {
+    public func unregisterForKeyboardNotifications() {
         if let willShowObserver = userInfo[KeyboardNotifications.willShow.rawValue] as? NSObjectProtocol {
             center.removeObserver(willShowObserver, name: UIResponder.keyboardWillShowNotification, object: nil)
         }

@@ -31,7 +31,7 @@ class MultipleConstraintsViewController: UIViewController, KeyboardAdjustable {
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-        unregisterForKeyboardNotification()
+        unregisterForKeyboardNotifications()
     }
 }
 
